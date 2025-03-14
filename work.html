@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Work</title>
+        <!-- CDN  -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/common.css" />
+        <link rel="stylesheet" href="./css/sub2.css" />
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Flip.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+        <script src="./js/common.js"></script>
+        <script src="./js/work.js"></script>
+    </head>
+    <body>
+        <!-- s:header -->
+        <header id="header">
+            <nav>
+                <h1 class="logo">
+                    <a href="./index.html">
+                        <i class="hidden">내 이모지</i>
+                    </a>
+                </h1>
+                <ul class="gnb">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./work.html">Work</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- e:header -->
+
+        <!-- 선택한 카드가 표시되는 영역 -->
+        <div class="detail-info">
+            <div class="detail-image"></div>
+            <h3 class="detail-title"></h3>
+            <p class="detail-text"></p>
+            <div class="detail-btns"></div>
+        </div>
+
+        <section class="slider-section">
+            <div class="wheel">
+                <!-- 🚩 이미지의 갯수는 상관없음 -->
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/493188dee481260d5c89790036be0e668b566dca82634c93f811198148a26065"
+                        alt="개인 포트폴리오 웹사이트 "
+                        data-title="Personal Website"
+                        data-link1="https://example1.com"
+                        data-link2="https://example1-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/493188dee481260d5c89790036be0e66339e41ce89b663315d96faecd7cfd11b"
+                        alt="피자헛 웹사이트 리디자인"
+                        data-title="WebsiteRedesign"
+                        data-link1="https://example2.com"
+                        data-link2="https://example2-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/493188dee481260d5c89790036be0e66960f4ab09fe6e38bae8c63030c9b37f9"
+                        alt="모바일 UX/UI 디자인(Team project)"
+                        data-title="UX/UI Design"
+                        data-link1="https://example3.com"
+                        data-link2="https://example3-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/493188dee481260d5c89790036be0e6641d1a2caccd0c566eab28b91e2e5d306"
+                        alt="라라랜드 마이크로 사이트 디자인"
+                        data-title="Microsite Design"
+                        data-link1="https://example4.com"
+                        data-link2="https://example4-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/8f5f359c0f9d003d7036bfc4cc7195b2617ea012db208c18f6e83b1a90a7baa7"
+                        alt="Fresh garden salad with grilled chicken"
+                        data-link1="https://example5.com"
+                        data-link2="https://example5-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/d0abc6fe74e616536cf07626699bbc707154249a3890514a43687a85e6b6cc82"
+                        alt="Gourmet pizza with special toppings"
+                        data-link1="https://example6.com"
+                        data-link2="https://example6-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/493188dee481260d5c89790036be0e66b3a18fdf58bc66ec3f4b6084b7d0b570"
+                        alt="Sweet dessert selection"
+                        data-link1="https://example7.com"
+                        data-link2="https://example7-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/493188dee481260d5c89790036be0e668b566dca82634c93f811198148a26065"
+                        alt="개인 포트폴리오 웹사이트 "
+                        data-title="Personal Website"
+                        data-link1="https://example1.com"
+                        data-link2="https://example1-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/493188dee481260d5c89790036be0e668b566dca82634c93f811198148a26065"
+                        alt="개인 포트폴리오 웹사이트 "
+                        data-title="Personal Website"
+                        data-link1="https://example1.com"
+                        data-link2="https://example1-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/493188dee481260d5c89790036be0e668b566dca82634c93f811198148a26065"
+                        alt="개인 포트폴리오 웹사이트 "
+                        data-title="Personal Website"
+                        data-link1="https://example1.com"
+                        data-link2="https://example1-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/493188dee481260d5c89790036be0e668b566dca82634c93f811198148a26065"
+                        alt="개인 포트폴리오 웹사이트 "
+                        data-title="Personal Website"
+                        data-link1="https://example1.com"
+                        data-link2="https://example1-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/493188dee481260d5c89790036be0e668b566dca82634c93f811198148a26065"
+                        alt="개인 포트폴리오 웹사이트 "
+                        data-title="Personal Website"
+                        data-link1="https://example1.com"
+                        data-link2="https://example1-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/493188dee481260d5c89790036be0e668b566dca82634c93f811198148a26065"
+                        alt="개인 포트폴리오 웹사이트 "
+                        data-title="Personal Website"
+                        data-link1="https://example1.com"
+                        data-link2="https://example1-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/493188dee481260d5c89790036be0e668b566dca82634c93f811198148a26065"
+                        alt="개인 포트폴리오 웹사이트 "
+                        data-title="Personal Website"
+                        data-link1="https://example1.com"
+                        data-link2="https://example1-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/493188dee481260d5c89790036be0e668b566dca82634c93f811198148a26065"
+                        alt="개인 포트폴리오 웹사이트 "
+                        data-title="Personal Website"
+                        data-link1="https://example1.com"
+                        data-link2="https://example1-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/493188dee481260d5c89790036be0e668b566dca82634c93f811198148a26065"
+                        alt="개인 포트폴리오 웹사이트 "
+                        data-title="Personal Website"
+                        data-link1="https://example1.com"
+                        data-link2="https://example1-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/493188dee481260d5c89790036be0e668b566dca82634c93f811198148a26065"
+                        alt="개인 포트폴리오 웹사이트 "
+                        data-title="Personal Website"
+                        data-link1="https://example1.com"
+                        data-link2="https://example1-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/493188dee481260d5c89790036be0e668b566dca82634c93f811198148a26065"
+                        alt="개인 포트폴리오 웹사이트 "
+                        data-title="Personal Website"
+                        data-link1="https://example1.com"
+                        data-link2="https://example1-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/493188dee481260d5c89790036be0e668b566dca82634c93f811198148a26065"
+                        alt="개인 포트폴리오 웹사이트 "
+                        data-title="Personal Website"
+                        data-link1="https://example1.com"
+                        data-link2="https://example1-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/493188dee481260d5c89790036be0e668b566dca82634c93f811198148a26065"
+                        alt="개인 포트폴리오 웹사이트 "
+                        data-title="Personal Website"
+                        data-link1="https://example1.com"
+                        data-link2="https://example1-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/493188dee481260d5c89790036be0e668b566dca82634c93f811198148a26065"
+                        alt="개인 포트폴리오 웹사이트 "
+                        data-title="Personal Website"
+                        data-link1="https://example1.com"
+                        data-link2="https://example1-detail.com"
+                    />
+                </div>
+                <div class="wheel__card">
+                    <img
+                        src="https://item.kakaocdn.net/do/493188dee481260d5c89790036be0e668b566dca82634c93f811198148a26065"
+                        alt="개인 포트폴리오 웹사이트 "
+                        data-title="Personal Website"
+                        data-link1="https://example1.com"
+                        data-link2="https://example1-detail.com"
+                    />
+                </div>
+            </div>
+        </section>
+        <div class="custom-cursor"></div>
+    </body>
+</html>
