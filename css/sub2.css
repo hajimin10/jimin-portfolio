@@ -60,6 +60,7 @@ img {
     pointer-events: none;
     z-index: 999;
     cursor: pointer;
+    border-radius: 20px;
 }
 
 /* 선택한 카드가 표시되는 영역 */

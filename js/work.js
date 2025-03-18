@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     detailInfo.addEventListener("click", (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         e.stopPropagation();
         if (!lastClickedCard) return;
         putBack(e);
