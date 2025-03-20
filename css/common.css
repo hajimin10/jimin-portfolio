@@ -52,6 +52,28 @@ a {
     width: 5rem;
     height: 6rem;
     background: url(../img/logo.png) no-repeat 0 0 / contain;
+    animation: bounceVertical 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite; /* 자연스러운 바운스를 위한 cubic-bezier */
+}
+
+@keyframes bounceVertical {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-12px); /* 처음 튕기기 */
+    }
+    40% {
+        transform: translateY(0); /* 원위치로 돌아오기 */
+    }
+    60% {
+        transform: translateY(-10px); /* 두 번째 튕기기 */
+    }
+    80% {
+        transform: translateY(0); /* 원위치로 돌아오기 */
+    }
+    100% {
+        transform: translateY(-5px); /* 마지막에 살짝 튕기기 */
+    }
 }
 
 .gnb {

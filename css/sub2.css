@@ -69,15 +69,19 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1000;
     text-align: center;
-    width: 400px;
-    padding-bottom: 60px; /* 버튼 영역을 위한 여백 */
+
+    backdrop-filter: blur(10px);
+    width: 430px;
+    border: 2px dashed rgba(0, 0, 0, 0.1);
+    min-height: 560px;
+    padding: 10px;
+    border-radius: 30px;
 }
 
 .detail-image {
-    border-radius: 20px;
-    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 1 / 0.85;
 }
 
 .detail-image img {
@@ -88,30 +92,24 @@ img {
 }
 
 .detail-title {
+    margin-top: 20px;
     font-weight: 600;
     font-size: 3.5rem;
-
-    margin: 0;
-    padding: 10px 0 0;
     opacity: 0;
     transform: translateY(10px);
     transition: 0.3s ease-out;
 }
 
 .detail-text {
-    margin: 0;
-    padding: 0 0 10px;
     opacity: 0;
     transform: translateY(10px);
     transition: 0.3s ease-out;
-    min-height: 20px;
     overflow: hidden;
 }
 
 .detail-text strong {
     display: block;
     font-size: 1.4rem;
-    margin-bottom: 8px;
 }
 
 .detail-text.show {
@@ -123,25 +121,24 @@ img {
     display: flex;
     gap: 10px;
     justify-content: center;
-    margin-top: 15px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    margin-top: 20px;
 }
 
 .detail-btns a {
     color: #000;
-    padding: 10px 10px;
+    padding: 10px 20px;
     border: 1px solid #000;
 
     text-decoration: none;
-
     transition: background 0.3s ease;
+
+    background-position: 50% 60%;
+    font-weight: 700;
+    font-size: 1.8rem;
 }
 
 .detail-btns a:hover {
     background: rgba(255, 255, 255, 0.7) url(../img/eye.png) no-repeat 50%;
-    border: none;
+    border-color: #fff;
     color: transparent; /* 텍스트 색을 투명하게 */
 }

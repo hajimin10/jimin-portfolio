@@ -16,17 +16,6 @@
 /* transition: opacity 0.8s ease-out; */
 /* }  */
 
-/* 페이드아웃 적용 */
-body.loaded .intro-screen {
-    opacity: 0;
-    pointer-events: none; /* 사라지는 동안 클릭 방지 */
-}
-
-/* 완전히 사라진 후 */
-body.loaded .intro-screen {
-    display: none;
-}
-
 .header-tac {
     overflow: hidden; /* 가로 스크롤 방지 */
     width: 100%; /* 부모 요소가 전체 화면을 차지하도록 설정 */
