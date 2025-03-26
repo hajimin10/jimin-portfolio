@@ -29,8 +29,27 @@
         <script src="./js/home.js"></script>
     </head>
     <body>
-        <!-- 인트로 화면 -->
-        <!-- <div class="intro-screen">🥨</div> -->
+        <!-- loading -->
+        <div class="loading">
+            <div class="face">
+                <svg viewBox="0 0 92 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="12" fill="#2DE65E" />
+                    <path
+                        d="M56 12C56 17.5228 51.5228 22 46 22C40.4772 22 36 17.5228 36 12"
+                        stroke="#2DE65E"
+                        stroke-width="8"
+                        stroke-linecap="round"
+                    />
+                    <circle cx="80" cy="12" r="12" fill="#2DE65E" />
+                    <circle cx="80" cy="15" r="3" fill="black" class="eye" />
+                    <circle cx="12" cy="15" r="3" fill="black" class="eye" />
+                </svg>
+                <div class="bar-container">
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+        <!-- // loading -->
 
         <!-- s:header -->
         <header id="header">
@@ -49,7 +68,6 @@
             </nav>
         </header>
         <!-- e:header -->
-
         <!-- s:main -->
         <div class="header-tac">
             <h2>
@@ -58,9 +76,7 @@
             </h2>
         </div>
         <!-- e:main -->
-
         <button class="exploding-button" onclick="explodeButton()">GO</button>
-
         <!-- s:footer -->
         <div class="scrolling-text">
             <div class="text-wrapper">
@@ -110,5 +126,36 @@
         </div>
 
         <div class="custom-cursor"></div>
+
+        <script>
+            // 페이지 로딩 시작 시간 기록
+            const startTime = performance.now();
+
+            window.addEventListener("load", function () {
+                // 로딩 시간을 3배로 늘림
+                const loadTime = ((performance.now() - startTime) / 1000) * 200;
+
+                // bar와 eye 요소들을 찾아서 animation-duration 설정
+                const bar = document.querySelector(".bar");
+                const eyes = document.querySelectorAll(".eye");
+
+                bar.style.animationDuration = `${loadTime}s`;
+                eyes.forEach((eye) => {
+                    eye.style.animationDuration = `${loadTime}s`;
+                });
+
+                // 애니메이션 시작을 위한 클래스 추가
+                bar.classList.add("animate");
+                eyes.forEach((eye) => {
+                    eye.classList.add("animate");
+                });
+
+                // 로딩 완료 시 로딩 요소 숨김
+                setTimeout(() => {
+                    const loading = document.querySelector(".loading");
+                    loading.style.display = "none";
+                }, loadTime * 1300);
+            });
+        </script>
     </body>
 </html>

@@ -29,15 +29,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // .detail-btns 내 동적으로 추가된 <a> 요소에 대한 이벤트 위임
-    document.querySelector(".detail-btns").addEventListener("mouseover", (e) => {
-        if (e.target.tagName === "A") {
-            cursor.classList.add("active");
-        }
-    });
+    // document.querySelector(".detail-btns").addEventListener("mouseover", (e) => {
+    //     if (e.target.tagName === "A") {
+    //         cursor.classList.add("active");
+    //     }
+    // });
 
-    document.querySelector(".detail-btns").addEventListener("mouseout", (e) => {
-        if (e.target.tagName === "A") {
-            cursor.classList.remove("active");
-        }
-    });
+    // document.querySelector(".detail-btns").addEventListener("mouseout", (e) => {
+    //     if (e.target.tagName === "A") {
+    //         cursor.classList.remove("active");
+    //     }
+    // });
 });
