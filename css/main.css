@@ -12,8 +12,8 @@
     align-items: center;
 }
 
-.eye.animate {
-    animation: eyes linear both;
+.eye {
+    animation: eyes 3s linear both;
 }
 
 .bar-container {
@@ -39,8 +39,8 @@
     transform-origin: left;
 }
 
-.bar.animate {
-    animation: bar linear forwards;
+.bar {
+    animation: bar 3s linear forwards;
 }
 
 @keyframes eyes {
