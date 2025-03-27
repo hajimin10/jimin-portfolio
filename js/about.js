@@ -65,4 +65,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
         img.style.transform = `rotateX(${yAxis}deg) rotateY(${-xAxis}deg)`;
     });
+
+    const texts = document.querySelectorAll(".cls-1");
+    texts.forEach((text, index) => {
+        //각 글자의 길이 구하기
+        const textLength = Math.ceil(text.getTotalLength());
+        // console.log(index, textLength);
+
+        //각 글자의 길이에 맞춘 초기 세팅
+        gsap.set(text, {
+            strokeDasharray: textLength,
+            strokeDashoffset: textLength,
+        });
+
+        // 각 글자별 strokeDashoffset을 0으로 조정
+        gsap.to(text, {
+            strokeDashoffset: 0,
+            duration: 1,
+            delay: index * 0.05,
+        });
+    });
 });

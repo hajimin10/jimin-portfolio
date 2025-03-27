@@ -13,7 +13,7 @@
 }
 
 .eye {
-    animation: eyes 3s linear both;
+    animation: eyes 1.5s linear both;
 }
 
 .bar-container {
@@ -40,7 +40,7 @@
 }
 
 .bar {
-    animation: bar 3s linear forwards;
+    animation: bar 1.5s linear forwards;
 }
 
 @keyframes eyes {
@@ -121,9 +121,9 @@
 }
 
 .exploding-button {
-    position: fixed; /* 화면에서 고정된 위치 */
-    top: 75%;
-    left: 50%;
+    display: block;
+    min-width: 150px;
+    margin: 50px auto;
     padding: 10px 60px;
     font-size: 40px;
     background: #000;
@@ -150,31 +150,31 @@
 
 @keyframes explodeAnimation {
     0% {
-        transform: scale(1) translate(-50%, -50%); /* 원래 크기 */
+        transform: scale(1); /* 원래 크기 */
     }
     50% {
-        transform: scale(2.5) translate(-50%, -50%); /* 커짐 */
+        transform: scale(2.5); /* 커짐 */
     }
     100% {
-        transform: scale(0) translate(-50%, -50%); /* 사라짐 */
+        transform: scale(0); /* 사라짐 */
         opacity: 0;
     }
 }
 
 @keyframes shakeAnimation {
     0% {
-        transform: translate(-50%, -50%) rotate(-5deg); /* 왼쪽 기울기 */
+        transform: rotate(-5deg); /* 왼쪽 기울기 */
     }
     25% {
-        transform: translate(-50%, -50%) rotate(5deg); /* 오른쪽 기울기 */
+        transform: rotate(5deg); /* 오른쪽 기울기 */
     }
     50% {
-        transform: translate(-50%, -50%) rotate(-5deg); /* 왼쪽 기울기 */
+        transform: rotate(-5deg); /* 왼쪽 기울기 */
     }
     75% {
-        transform: translate(-50%, -50%) rotate(5deg); /* 오른쪽 기울기 */
+        transform: rotate(5deg); /* 오른쪽 기울기 */
     }
     100% {
-        transform: translate(-50%, -50%) rotate(-5deg); /* 왼쪽 기울기 */
+        transform: rotate(-5deg); /* 왼쪽 기울기 */
     }
 }
